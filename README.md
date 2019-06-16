@@ -3,7 +3,7 @@ Bamon Designs Ecommerce store, 18-06-2019
 By Brenda Okumu
 
 Description
-https://brendaokumu.github.io/aboutIBM/
+https://brendaokumu.github.io/BamonDesigns/
 
 An ecommerce store for selling shoes designed by Bamon shoe company.
 
