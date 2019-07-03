@@ -26,6 +26,10 @@ header {
         width: 125px;
     }
 
+/*#mainHeader {
+      height: 80px;
+  }
+*/
 #headername {
     font-family:cursive;
     font-size: 36px;
@@ -33,6 +37,41 @@ header {
     padding: 15px;
     margin: 8px 0px;
     font-weight: bold;
+}
+
+nav {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 60px;
+    padding-left: 5px;
+}
+
+    nav ul {
+        list-style: none;
+        padding: 0px;
+    }
+
+        nav ul li {
+            display: block;
+        }
+
+.navlink {
+    height: 35px;
+    margin-right: 50px;
+    font-size: 24px;
+    float: left;
+    padding-top: 12px;
+    color: white;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+.navlink.active {
+    }
+
+.backgroundgradient1 {
+    background-color:#f705ef;
 }
 
 #welcomeimage {
@@ -186,14 +225,14 @@ footer {
 }
 
 .productarticlewidethumbnail {
-    width: 100px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     float: left;
     margin: 20px;
 }
 
 .productarticlewidecontent {
-    width: 80%;
+    width: 60%;
     float: right;
 }
 
@@ -209,7 +248,7 @@ footer {
 }
 
 .productarticlewideprice {
-    font-size: 15px;
+    font-size: 20px;
     color: green;
     font-weight: bold;
     padding-top: 15px;
@@ -231,6 +270,9 @@ footer {
     float: left;
     width: 1000px;
 }
+.productarticlefigure {
+float: left;
+}
 
 .productarticlelargeimage {
     width: 200px;
@@ -245,7 +287,7 @@ footer {
 }
 
 .productarticlecontent {
-    width:75%;
+    width:65%;
     float: right;
 }
 

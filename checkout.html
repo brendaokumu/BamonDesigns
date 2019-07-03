@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bamon Designs Shoe Collection</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+      <header id="mainHeader">
+        <div>
+          <a class="headerlogo" href="index.html">
+            <img src="img/logo2.jpg">
+          </a>
+          <span id="headername">Bamon Designs Shoe Collection Store</span>
+          <input type="search" class="searchbox" placeholder="Search our store">
+        </div>
+
+        <nav class="backgroundgradient1">
+          <ul>
+            <li><a class="navlink" href="index.html">Home</a></li>
+            <li><a class="navlink" href="allheels.html">Heels</a></li>
+            <li><a class="navlink" href="boots.html">Boots</a></li>
+            <li><a class="navlink" href="gifts.html">Gifts</a></li>
+            <li><a class="navlink" href="findus.html">Find Us</a></li>
+            <li><a class="navlink" href="checkout.html">Checkout</a></li>
+          </ul>
+        </nav>
+
+      </header>
+
+      <div id="welcomeimage">
+        <img src="img/home2.png">
+    </div>
+
+    <!--<div id="coffeeofthemonth">
+            <img src="images/cotm.jpg">
+        </div>-->
+
+    <section class="heelsdetails">
+      <header class="blockheader">
+        <span>Checkout</span>
+      </header>
+
+      <form id="mainForm" action="#" method="post">
+        <fieldset class="box">
+          <legend>Your Details</legend>
+          <div>
+            <p>
+                <label class="textlabel" for="firstNameInput">First Name</label>
+                <input id="firstNameInput" type="text" required="required" name="FirstName" autofocus="autofocus" class="textinput" maxlength="30" placeholder="Please enter your first name"/>
+            </p>
+            <p>
+                <label class="textlabel" for="lastNameInput">Last Name</label>
+                <input id="lastNameInput" type="text" required="required" name="LastName" class="textinput" size="10" maxlength="50" placeholder="Please enter your last name"/>
+            </p>
+            <p>
+                <label class="textlabel" for="emailInput">Email</label>
+                <input id="emailInput" type="email" required="required" name="Email" class="textinput" placeholder="Please enter your email"/>
+            </p>
+            <p>
+                <label class="textlabel" for="numberInput">House Number</label>
+                <input id="numberInput" type="text" required="required" name="Number" class="textinput" placeholder="Please enter your house number"/>
+            </p>
+            <p>
+                <label class="textlabel" for="cityInput">City</label>
+                <input id="cityInput" type="text" required="required" name="City" class="textinput" placeholder="Please enter your city"/>
+            </p>
+            <p>
+                <label class="textlabel" for="countryInput">Country</label>
+                <input id="countryInput" type="text" required="required" name="Country" pattern="[a-za-z]{3}" placeholder="Please enter your country's first 3letters"/>
+            </p>
+            <p>
+                <label class="textlabel" for="phoneInput">Phone Number</label>
+                <input id="phoneInput" type="text" required="required" name="PhoneNumber" class="textinput" placeholder="Please enter your phone number"/>
+            </p>
+            <p>
+                <label class="textlabel" for="blogInput">Blog</label>
+                <input id="blogInput" type="url" name="Blog" class="textinput" placeholder="Please enter your blog address if you have one"/>
+            </p>
+            <p>
+                <label class="textlabel" for="remarkInput">Remarks</label>
+                <input id="remarkInput" type="text" name="Remark" class="textinput" placeholder="Please enter any remarks you may have "/>
+            </p>
+          </div>
+        </fieldset>
+
+        <br>
+        <fieldset class="box">
+          <legend>Your Order</legend>
+          <div>
+            <p>
+                <label class="textlabel" for="deliveryDateInput">Requested Delivery Date</label>
+                <input id="deliveryDateInput" type="date" name="BirthDate" class="textinput"/>
+            </p>
+            <p>
+                <label class="textlabel" for="colorInput">Wrapping Paper Color</label>
+                <input id="colorInput" type="color" name="Color" class="textinput"/>
+            </p>
+            <p>
+                <label class="textlabel" for="bowInput">How Many Bows on the Package?</label>
+                <input id="bowInput" type="number" name="Bows" class="textinput" placeholder="Enter a value between 1 and 5" min="1" max="5"/>
+            </p>
+          </div>
+        </fieldset>
+
+        <input type="submit" class="submitbutton" value="Place Order">
+
+      </form>
+
+    </section>
+
+    </body>
+    </html>
