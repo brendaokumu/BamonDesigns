@@ -6,6 +6,30 @@ function addDnDHandlers() {         //user can pickup the image from all heels p
   //initialize the cart
   var shoppingcart = document.querySelectorAll("#shoppingcart ul")[0];          //selecting child of selector shopping cart which is ul
 
+  //create a constructor function for the cart object
+  var Cart = (function () {
+    this.heels = new Array();         //create an array which will contain all the heels added during drag and drop
+  });
+
+  //create a constructor function for heel object
+  var Heel = (function (id, price) {
+    this.heelId = id;
+    this.price = price;
+  });
+
+  var currentCart = null;         //contains actual cart contents coming from local storage
+  currentCart = JSON.parse(localStorage.getItem('cart'));        //check if localStorage already have something stored with id cart then parse it and save to currentCart
+  if (!currentCart) {         //if current cart doesn't exist yet, create an empty cart with the function createEmptyCart
+    createEmptyCart();
+  }
+
+  UpdateShoppingCartUI();
+  currentCart.addHeel = function (heel) {
+    currentCart.heels.push(heel);
+
+    localStorage.setItem('cart', JSON.stringify(currentCart));          //override waht's in localStorage cart with stringify currentCart
+  }
+
   //for loop which loops through the heels images and on each image I will attach an addeventlistener to listen for the drag start event.And when it fires, the function (ev) is going to execute.
   for (var i = 0; i < heelimages.length; i++) {
     heelimages[i].addEventListener("dragstart", function (ev) {
@@ -36,10 +60,26 @@ function addDnDHandlers() {         //user can pickup the image from all heels p
     }, false);
 
     function addHeelToShoppingCart(item, id) {
-      var html = id + " " + item.getAttribute("data-price");          // try to fetch the price of the element through dataprice with the string
+      var price = item.getAttribute("data-price");
 
-      var liElement = document.createElement('li');
-      liElement.innerHTML = html;
-      shoppingcart.appendChild(liElement); //append li child onto above shopping cart function through changing the li's html using inner.html to html
+      var heel = new Heel(id, price);
+      currentCart.addHeel(heel);
+
+      UpdateShoppingCartUI(); 
+    }
+
+    function createEmptyCart() {
+      localStorage.clear();
+      localStorage.setItem("cart", JSON.stringify(new Cart()));
+      currentCart = JSON.parse(localStorage.getItem("cart"));
+    }
+
+    function UpdateShoppingCartUI() {
+      shoppingcart.innerHTML = "";
+      for (var i = 0; i < currentCart.heels.length; i++) {
+        var liElement = document.createElement('li');
+        liElement.innerHTML = currentCart.heels[i].heelId + " " + currentCart.heels[i].price;
+        shoppingcart.appendChild(liElement);
+      }
     }
   }

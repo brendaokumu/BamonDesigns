@@ -327,3 +327,22 @@ float: left;
     font-weight: bold;
     padding-top: 15px;
 }
+#map {
+    float: left;
+    width: 100%;
+    height: 400px;
+    margin: 25px;
+}
+
+#driving-directions {
+    float: left;
+}
+
+.blockheader1 {
+  float: left;
+  color: #f705ef;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 350px;
+}
