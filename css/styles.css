@@ -13,12 +13,13 @@ header {
 .searchbox {
     float: right;
     padding: 5px;
-    margin: 10px 10px;
+    margin-top: 15px;
 }
 
 .headerlogo {
     float: left;
     margin-right: 10px;
+    height: -webkit-fill-available;
 }
 
     .headerlogo > img {
@@ -37,6 +38,7 @@ header {
     padding: 15px;
     margin: 8px 0px;
     font-weight: bold;
+    text-shadow: 5px 5px 10px #f705ef;
 }
 
 nav {
@@ -197,6 +199,29 @@ nav {
     color: #f705ef;
     margin-top: 5px;
 }
+
+.addtocartbutton {
+    cursor: pointer;
+    padding: 4px 25px;
+    background: #f705ef;
+    border: 1px solid #381f09;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    box-shadow: 0 0 4px rgba(0,0,0, .75);
+    color: #f3f3f3;
+    font-size: 0.8em;
+    width: 80px;
+}
+
+    .addtocartbutton:hover, .addtocartbutton:focus {
+        background-color: #0f64af;
+        -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+        -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+        box-shadow: 0 0 1px rgba(0,0,0, .75);
+    }
 
 footer {
     clear: both;
