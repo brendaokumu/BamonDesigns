@@ -5,6 +5,7 @@
     <title>Welcome to Bamon Designs Shoe Collection Store</title>
     <link rel="icon" href="img/logo.jpg">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/canvasChart.js"></script>
   </head>
   <body>
       <header id="mainHeader">
@@ -63,5 +64,14 @@
       </div>
 
     </section>
+
+    <div id="salesCanvasGraph">
+        <canvas id="barChart" height="800" width="750">
+            Sorry, your browser doesn't support canvas, therefore you can't see this chart! Upgrade to a new and better browser!
+        </canvas>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", drawChart, false );
+    </script>
   </body>
 </html>
